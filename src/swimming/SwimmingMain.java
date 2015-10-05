@@ -1,9 +1,11 @@
 
 package swimming;
 
-public class Swimming {
+public class SwimmingMain {
 
     public static void main(String[] args) {
+        //making players
+
     }
     
 }
