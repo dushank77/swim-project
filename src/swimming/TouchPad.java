@@ -3,7 +3,7 @@ package swimming;
 
 public class TouchPad {
     public boolean padTouched(){
-        //if pad touched signal came
+        //if player came to pad came
         return true;
     }
     
