@@ -15,10 +15,11 @@ import javax.swing.ImageIcon;
  * @author Student
  */
 public class SwimGUI extends javax.swing.JFrame {
-    
+
     ArrayList<Person> persons;
     Judge judge;
     int playerCount = 0;
+    int spectatorCount = 0;
 
     /**
      * Creates new form SwimGUI
@@ -29,9 +30,9 @@ public class SwimGUI extends javax.swing.JFrame {
         this.persons = persons;
         initComponents();
         initialize();
-        
+
     }
-    
+
     private void initialize() {
         for (Person person : persons) {
             try {
@@ -74,14 +75,75 @@ public class SwimGUI extends javax.swing.JFrame {
                         p4ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
                         p4SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
                     }
+                } else if (playerCount == 5) {
+                    p5Label.setText(swimmer.getName());
+                    if (swimmer.getGender().equals("Male")) {
+                        p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
+                        p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                    } else {
+                        p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
+                        p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                    }
                 }
             } catch (ClassCastException exception) {
                 System.out.println("This is not a swimmer!");
+                try {
+                    //System.out.println("in if");
+                    Spectator spectator = (Spectator) person;
+                    spectatorCount++;
+                    if (spectatorCount == 1) {
+                        if (spectator.getGender().equals("Male")) {
+                            chair1.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+
+                        } else {
+                            chair1.setIcon(new ImageIcon("./src/images/female black.png"));
+                        }
+//                    } else if (playerCount == 2) {
+//                        p2Label.setText(swimmer.getName());
+//                        if (swimmer.getGender().equals("Male")) {
+//                            p2ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
+//                            p2SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+//                        } else {
+//                            p2ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
+//                            p2SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+//                        }
+//                    } else if (playerCount == 3) {
+//                        p3Label.setText(swimmer.getName());
+//                        if (swimmer.getGender().equals("Male")) {
+//                            p3ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
+//                            p3SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+//                        } else {
+//                            p3ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
+//                            p3SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+//                        }
+//                    } else if (playerCount == 4) {
+//                        p4Label.setText(swimmer.getName());
+//                        if (swimmer.getGender().equals("Male")) {
+//                            p4ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
+//                            p4SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+//                        } else {
+//                            p4ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
+//                            p4SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+//                        }
+//                    } else if (playerCount == 5) {
+//                        p5Label.setText(swimmer.getName());
+//                        if (swimmer.getGender().equals("Male")) {
+//                            p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
+//                            p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+//                        } else {
+//                            p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
+//                            p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+//                        }
+                    }
+                } catch (ClassCastException classCastException) {
+                    System.out.println("This is not a swimmer!");
+                }
             }
             p1SwimLabel.setVisible(false);
             p2SwimLabel.setVisible(false);
             p3SwimLabel.setVisible(false);
             p4SwimLabel.setVisible(false);
+            p5SwimLabel.setVisible(false);
         }
     }
 
@@ -95,7 +157,7 @@ public class SwimGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        chair1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -131,6 +193,8 @@ public class SwimGUI extends javax.swing.JFrame {
         p3Label = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         p4Label = new javax.swing.JLabel();
+        p5Label = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -145,70 +209,74 @@ public class SwimGUI extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         p1SwimLabel = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        p5SwimLabel = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         startButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        p5ReadyLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SWIMMING COMPETITION");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
-        jLabel8.setText("jLabel8");
+        chair1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
+        chair1.setText("jLabel8");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel9.setText("jLabel8");
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel13.setText("jLabel8");
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel15.setText("jLabel8");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel11.setText("jLabel8");
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel16.setText("jLabel16");
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel17.setText("jLabel17");
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel18.setText("jLabel16");
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel19.setText("jLabel17");
 
-        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel20.setText("jLabel17");
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel21.setText("jLabel16");
 
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel22.setText("jLabel17");
 
-        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\female black.png")); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel23.setText("jLabel17");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel10.setText("jLabel8");
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel12.setText("jLabel8");
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel14.setText("jLabel8");
 
-        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         jLabel24.setText("jLabel8");
 
-        jLabel25.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\boy-512sasas.png")); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         jLabel25.setText("jLabel8");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -216,19 +284,19 @@ public class SwimGUI extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(12, 12, 12)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(7, 7, 7)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chair1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -239,7 +307,7 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -266,7 +334,7 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chair1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel18)
@@ -388,12 +456,25 @@ public class SwimGUI extends javax.swing.JFrame {
 
         p4Label.setText("player 4");
 
+        p5Label.setText("player 5");
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(p5Label)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(p4Label)
@@ -412,7 +493,7 @@ public class SwimGUI extends javax.swing.JFrame {
                             .addComponent(p1Label)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 26, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -434,7 +515,11 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p4Label)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(p5Label)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 14, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 102));
@@ -548,7 +633,7 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(p4SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 384, Short.MAX_VALUE)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -558,7 +643,7 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p4SwimLabel)
                     .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel8.setBackground(new java.awt.Color(102, 153, 255));
@@ -598,6 +683,44 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        jPanel15.setBackground(new java.awt.Color(102, 153, 255));
+
+        jPanel17.setBackground(new java.awt.Color(51, 51, 0));
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 45, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 52, Short.MAX_VALUE)
+        );
+
+        p5SwimLabel.setText("jLabel36");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(p5SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(p5SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -606,6 +729,7 @@ public class SwimGUI extends javax.swing.JFrame {
             .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,7 +740,10 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\staff.png")); // NOI18N
@@ -640,6 +767,8 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\t34cemqe.png")); // NOI18N
         jLabel3.setText("jLabel3");
 
+        p5ReadyLabel.setText("jLabel24");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -647,99 +776,102 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(27, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addGap(1, 1, 1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(67, 67, 67)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(p2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(p3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(p1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(6, 6, 6))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(p4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(p4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p5ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
+                        .addGap(46, 46, 46)
                         .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(jLabel30)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(p1ReadyLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(p2ReadyLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(p3ReadyLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(p4ReadyLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(295, 295, 295)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel35))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(p1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(p2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p5ReadyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel31)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(9, 9, 9)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(466, 466, 466)
-                            .addComponent(jLabel35))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(99, 99, 99)
-                            .addComponent(jLabel30)
-                            .addGap(166, 166, 166)
-                            .addComponent(jLabel31)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
-                        .addGap(206, 206, 206)
-                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(9, 9, 9))
         );
 
         pack();
@@ -767,14 +899,20 @@ public class SwimGUI extends javax.swing.JFrame {
         p2SwimLabel.setVisible(true);
         p3SwimLabel.setVisible(true);
         p4SwimLabel.setVisible(true);
-        
+        p5SwimLabel.setVisible(true);
+
         p1ReadyLabel.setVisible(false);
         p2ReadyLabel.setVisible(false);
         p3ReadyLabel.setVisible(false);
         p4ReadyLabel.setVisible(false);
-        
+        p5ReadyLabel.setVisible(false);
+
 
     }//GEN-LAST:event_startButtonActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -812,6 +950,7 @@ public class SwimGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel chair1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -835,7 +974,6 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -843,7 +981,9 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -856,6 +996,7 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel p1Label;
     private javax.swing.JLabel p1ReadyLabel;
     private javax.swing.JLabel p1SwimLabel;
@@ -868,6 +1009,9 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JLabel p4Label;
     private javax.swing.JLabel p4ReadyLabel;
     private javax.swing.JLabel p4SwimLabel;
+    private javax.swing.JLabel p5Label;
+    private javax.swing.JLabel p5ReadyLabel;
+    private javax.swing.JLabel p5SwimLabel;
     private javax.swing.JButton startButton;
     // End of variables declaration//GEN-END:variables
 }

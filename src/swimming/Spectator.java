@@ -2,34 +2,40 @@ package swimming;
 
 public class Spectator extends Person {
 
+    Spectator(String name, String gender) {
+        this.name = name;
+        this.gender = gender;
+    }
+
     @Override
     public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        this.name = name;
     }
 
     @Override
     public void setAge(int age) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.age = age;
     }
 
     @Override
     public void setGender(String gender) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.gender = gender;
     }
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
     @Override
     public int getAge() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return age;
     }
 
     @Override
     public String getGender() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return gender;
     }
 
 }
