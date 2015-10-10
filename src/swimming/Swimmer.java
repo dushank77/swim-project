@@ -1,6 +1,6 @@
 package swimming;
 
-public class Swimmer extends Person {
+public class Swimmer extends Person implements butterflyStroke,backStroke,breastStroke,freeStyle{
 
     String colour;
 
@@ -20,6 +20,7 @@ public class Swimmer extends Person {
 
     public void touchingThePad() {
     }
+    
 
     public void butterflyStroke() {
     }

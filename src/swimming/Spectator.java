@@ -1,10 +1,12 @@
 package swimming;
 
 public class Spectator extends Person {
+    public static int spectatorCount=0;
 
     Spectator(String name, String gender) {
         this.name = name;
         this.gender = gender;
+        spectatorCount++;
     }
 
     @Override
@@ -36,6 +38,10 @@ public class Spectator extends Person {
     @Override
     public String getGender() {
         return gender;
+    }
+    
+    public static void spectatorNumber(){
+        System.out.println(spectatorCount);
     }
 
 }
