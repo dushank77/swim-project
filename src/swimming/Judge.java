@@ -1,9 +1,10 @@
 package swimming;
 
 public class Judge extends Person {
-
+    public static int judgeCount=0;
     public Judge(String name) {
         this.name=name;
+        judgeCount++;
     }
     
     
@@ -41,6 +42,11 @@ public class Judge extends Person {
     @Override
     public String getGender() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static int getNumber() {
+        System.out.println("Number of judges : "+judgeCount);
+        return judgeCount;
     }
 
 }

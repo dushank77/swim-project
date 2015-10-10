@@ -2,21 +2,17 @@ package swimming;
 
 public class Swimmer extends Person implements butterflyStroke,backStroke,breastStroke,freeStyle{
 
-    String colour;
-
+    public static int swimmerCount=0;
+    
     public Swimmer(String name, int age, String gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
+        swimmerCount++;
     }
+    
 
-    public void setColour() {
-        if (this.gender == "male") {
-            colour = "RED";
-        } else {
-            colour = "BLUE";
-        }
-    }
+
 
     public void touchingThePad() {
     }
@@ -64,5 +60,11 @@ public class Swimmer extends Person implements butterflyStroke,backStroke,breast
     public String getGender() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return gender;
+    }
+
+
+    public static int getNumber() {
+        System.out.println("Number of swimers : "+swimmerCount);
+        return swimmerCount;
     }
 }

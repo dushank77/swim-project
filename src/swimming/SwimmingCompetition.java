@@ -1,7 +1,6 @@
 
 package swimming;
 
-import javax.swing.JFrame;
 
 public class SwimmingCompetition {
 

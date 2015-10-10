@@ -51,6 +51,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="ADD PEOPLE"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
@@ -75,20 +76,29 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="jButton1" max="32767" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="104" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -97,7 +107,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
         </Property>
       </Properties>
 
@@ -116,13 +126,11 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel6" min="-2" pref="105" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="judgeNameText" min="-2" pref="149" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -168,42 +176,41 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="p4mRadioButton" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="p4fRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="p3mRadioButton" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="p3fRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="p2mRadioButton" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="p2fRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
                                                       <Component id="p1mRadioButton" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="p1fRadioButton" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="player1FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="p2mRadioButton" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="player2FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="p3mRadioButton" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="player3FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="p4mRadioButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="player4FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
                                                   <Component id="p5mRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="p5fRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="player5FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
                   </Group>
@@ -228,7 +235,7 @@
                       <Component id="player1NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="player1AgeText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="p1mRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="p1fRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player1FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -236,7 +243,7 @@
                       <Component id="player2NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="player2AgeText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="p2mRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="p2fRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player2FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -244,7 +251,7 @@
                       <Component id="player3NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="player3AgeText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="p3mRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="p3fRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player3FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -252,7 +259,7 @@
                       <Component id="player4NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="player4AgeText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="p4mRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="p4fRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player4FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -260,13 +267,12 @@
                       <Component id="player5NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="player5AgeText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="p5mRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="p5fRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player5FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="judgeNameText" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
@@ -286,7 +292,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="sansserif" size="24" style="2"/>
+              <Font name="sansserif" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="ADD PLAYERS"/>
@@ -382,7 +388,7 @@
             <Property name="text" type="java.lang.String" value="Male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="p1fRadioButton">
+        <Component class="javax.swing.JRadioButton" name="player1FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
@@ -390,7 +396,7 @@
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p1fRadioButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="player1FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="p2mRadioButton">
@@ -401,7 +407,7 @@
             <Property name="text" type="java.lang.String" value="Male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="p2fRadioButton">
+        <Component class="javax.swing.JRadioButton" name="player2FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
@@ -409,10 +415,10 @@
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p2fRadioButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="player2FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="p3fRadioButton">
+        <Component class="javax.swing.JRadioButton" name="player3FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup3"/>
@@ -420,7 +426,7 @@
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p3fRadioButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="player3FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="p3mRadioButton">
@@ -439,7 +445,7 @@
             <Property name="text" type="java.lang.String" value="Male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="p4fRadioButton">
+        <Component class="javax.swing.JRadioButton" name="player4FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup4"/>
@@ -447,21 +453,10 @@
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p4fRadioButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="player4FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="judgeNameText">
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="sansserif" size="12" style="3"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Next&gt;&gt;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -487,7 +482,7 @@
             <Property name="text" type="java.lang.String" value="Male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="p5fRadioButton">
+        <Component class="javax.swing.JRadioButton" name="player5FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup5"/>
@@ -495,7 +490,7 @@
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p5fRadioButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="player5FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -503,20 +498,15 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
         </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel11" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel12" min="-2" pref="105" max="-2" attributes="0"/>
@@ -526,92 +516,88 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="sp1name" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="sp2name" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          <Component id="sp1male" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="sp2male" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="sp1female" min="-2" max="-2" attributes="0"/>
-                                      <Component id="sp2female" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="42" max="32767" attributes="0"/>
-                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="sp4name" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Component id="spectator4NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           <Component id="sp4male" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                                          <Component id="sp4female" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="spectator4FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="spectator9NameText" pref="71" max="32767" attributes="0"/>
+                                          <Component id="spectator8NameText" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="sp9name" pref="71" max="32767" attributes="0"/>
-                                              <Component id="sp8name" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                                  <Component id="sp8female" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="sp9female" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="sp7name" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Component id="spectator7NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="sp8male" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="sp8male" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator8FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                               <Group type="102" attributes="0">
                                                   <Component id="sp7male" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="sp7female" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator7FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="sp9male" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="sp9male" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator9FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="sp3name" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Component id="sp3male" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                                          <Component id="sp3female" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="sp6name" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="sp5name" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="spectator6NameText" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="spectator5NameText" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Component id="sp5male" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="sp5female" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator5FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Component id="sp6male" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="sp6female" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator6FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="spectator3NameText" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="sp3male" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="spectator3FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="sp2male" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="sp1male" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="spectator1FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="spectator2FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="spectator2NameText" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator1NameText" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -619,58 +605,58 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="sp18name" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator18NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="sp18male" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="sp18female" min="-2" max="-2" attributes="0"/>
+                                      <Component id="spectator18FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="sp13name" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator13NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="sp13male" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="sp13female" min="-2" max="-2" attributes="0"/>
+                                      <Component id="spectator13FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="sp14name" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator14NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="sp14male" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="sp14female" min="-2" max="-2" attributes="0"/>
+                                      <Component id="spectator14FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="sp16name" max="32767" attributes="0"/>
-                                          <Component id="sp15name" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Component id="spectator16NameText" max="32767" attributes="0"/>
+                                          <Component id="spectator15NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                               <Component id="sp15male" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="sp15female" min="-2" max="-2" attributes="0"/>
+                                              <Component id="spectator15FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                               <Component id="sp16male" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="sp16female" min="-2" max="-2" attributes="0"/>
+                                              <Component id="spectator16FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="sp17name" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator17NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="sp17male" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="sp17female" min="-2" max="-2" attributes="0"/>
+                                      <Component id="spectator17FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="sp11male" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="sp12name" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="spectator12NameText" min="-2" pref="70" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                               <Component id="sp12male" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -678,16 +664,16 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="sp12female" min="-2" max="-2" attributes="0"/>
-                                          <Component id="sp11female" min="-2" max="-2" attributes="0"/>
-                                          <Component id="sp10female" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spectator12FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spectator11FemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spectator10FemaleRadioButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="sp10name" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="sp11name" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="spectator10NameText" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="spectator11NameText" min="-2" pref="71" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                               </Group>
@@ -696,14 +682,18 @@
                       </Group>
                   </Group>
               </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel22" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" pref="48" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel22" min="-2" pref="52" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -711,119 +701,117 @@
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="sp1female" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="sp1name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sp1male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="spectator1NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sp1male" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator1FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="sp2female" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="sp2name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sp2male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="spectator2NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sp2male" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator2FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp3name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator3NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp3male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp3female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator3FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp4name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator4NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp4male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp4female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator4FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="sp5name" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp5male" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp5female" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator5NameText" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="sp5male" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spectator5FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp6name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator6NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp6male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp6female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator6FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp7name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator7NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp7male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp7female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator7FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="sp8name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sp8female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="spectator8NameText" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sp8male" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="sp8male" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator8FemaleRadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp9name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator9NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp9male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp9female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator9FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp10name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator10NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp10male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp10female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator10FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp11name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator11NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp11male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp11female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator11FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp12name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator12NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp12male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp12female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator12FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp13name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator13NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp13male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp13female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator13FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp14name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator14NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp14male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp14female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator14FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp15name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator15NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp15male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp15female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator15FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp16name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator16NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp16male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp16female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator16FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp17name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator17NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp17male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp17female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator17FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sp18name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator18NameText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sp18male" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sp18female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spectator18FemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -833,16 +821,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel11">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="sansserif" size="14" style="2"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Add Spectators"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="sp1name">
+        <Component class="javax.swing.JTextField" name="spectator1NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp1male">
           <Properties>
@@ -852,7 +831,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp1female">
+        <Component class="javax.swing.JRadioButton" name="spectator1FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup22"/>
@@ -860,7 +839,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp1femaleActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator1FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">
@@ -881,9 +860,9 @@
             <Property name="text" type="java.lang.String" value="Gender"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp2name">
+        <Component class="javax.swing.JTextField" name="spectator2NameText">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp2nameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator2NameTextActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp2male">
@@ -893,8 +872,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp2maleActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp2female">
+        <Component class="javax.swing.JRadioButton" name="spectator2FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup21"/>
@@ -902,7 +884,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp3name">
+        <Component class="javax.swing.JTextField" name="spectator3NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp3male">
           <Properties>
@@ -912,7 +894,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp3female">
+        <Component class="javax.swing.JRadioButton" name="spectator3FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup20"/>
@@ -920,7 +902,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp4name">
+        <Component class="javax.swing.JTextField" name="spectator4NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp4male">
           <Properties>
@@ -930,7 +912,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp4female">
+        <Component class="javax.swing.JRadioButton" name="spectator4FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup19"/>
@@ -938,9 +920,9 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp5name">
+        <Component class="javax.swing.JTextField" name="spectator5NameText">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp5nameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator5NameTextActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp5male">
@@ -951,7 +933,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp5female">
+        <Component class="javax.swing.JRadioButton" name="spectator5FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup18"/>
@@ -959,10 +941,10 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp5femaleActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator5FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp6name">
+        <Component class="javax.swing.JTextField" name="spectator6NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp6male">
           <Properties>
@@ -972,7 +954,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp6female">
+        <Component class="javax.swing.JRadioButton" name="spectator6FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup17"/>
@@ -980,7 +962,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp8name">
+        <Component class="javax.swing.JTextField" name="spectator8NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp8male">
           <Properties>
@@ -990,7 +972,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp8female">
+        <Component class="javax.swing.JRadioButton" name="spectator8FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup15"/>
@@ -998,7 +980,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp9name">
+        <Component class="javax.swing.JTextField" name="spectator9NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp9male">
           <Properties>
@@ -1008,7 +990,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp9female">
+        <Component class="javax.swing.JRadioButton" name="spectator9FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup14"/>
@@ -1016,10 +998,10 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp9femaleActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator9FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp10name">
+        <Component class="javax.swing.JTextField" name="spectator10NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp10male">
           <Properties>
@@ -1029,7 +1011,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp10female">
+        <Component class="javax.swing.JRadioButton" name="spectator10FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup13"/>
@@ -1037,7 +1019,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp11name">
+        <Component class="javax.swing.JTextField" name="spectator11NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp11male">
           <Properties>
@@ -1047,7 +1029,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp11female">
+        <Component class="javax.swing.JRadioButton" name="spectator11FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup12"/>
@@ -1055,10 +1037,10 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sp11femaleActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator11FemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp12name">
+        <Component class="javax.swing.JTextField" name="spectator12NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp12male">
           <Properties>
@@ -1068,7 +1050,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp12female">
+        <Component class="javax.swing.JRadioButton" name="spectator12FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup11"/>
@@ -1076,7 +1058,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp13name">
+        <Component class="javax.swing.JTextField" name="spectator13NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp13male">
           <Properties>
@@ -1086,7 +1068,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp15female">
+        <Component class="javax.swing.JRadioButton" name="spectator15FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup8"/>
@@ -1094,7 +1076,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp15name">
+        <Component class="javax.swing.JTextField" name="spectator15NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp15male">
           <Properties>
@@ -1104,15 +1086,18 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp13female">
+        <Component class="javax.swing.JRadioButton" name="spectator13FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup10"/>
             </Property>
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spectator13FemaleRadioButtonActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp16name">
+        <Component class="javax.swing.JTextField" name="spectator16NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp16male">
           <Properties>
@@ -1122,7 +1107,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp16female">
+        <Component class="javax.swing.JRadioButton" name="spectator16FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup7"/>
@@ -1130,7 +1115,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp17name">
+        <Component class="javax.swing.JTextField" name="spectator17NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp17male">
           <Properties>
@@ -1140,7 +1125,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp17female">
+        <Component class="javax.swing.JRadioButton" name="spectator17FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup6"/>
@@ -1148,7 +1133,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp18name">
+        <Component class="javax.swing.JTextField" name="spectator18NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp18male">
           <Properties>
@@ -1158,7 +1143,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp18female">
+        <Component class="javax.swing.JRadioButton" name="spectator18FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup23"/>
@@ -1166,7 +1151,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp7name">
+        <Component class="javax.swing.JTextField" name="spectator7NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp7male">
           <Properties>
@@ -1176,7 +1161,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp7female">
+        <Component class="javax.swing.JRadioButton" name="spectator7FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup16"/>
@@ -1184,7 +1169,7 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sp14name">
+        <Component class="javax.swing.JTextField" name="spectator14NameText">
         </Component>
         <Component class="javax.swing.JRadioButton" name="sp14male">
           <Properties>
@@ -1194,7 +1179,7 @@
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="sp14female">
+        <Component class="javax.swing.JRadioButton" name="spectator14FemaleRadioButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup9"/>
@@ -1202,7 +1187,231 @@
             <Property name="text" type="java.lang.String" value="female"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel22">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="24" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="ADD SPECTATORS"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="66" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel14" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel15" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="staff1NameText" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel16" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="staff2NameText" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel17" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="staff3NameText" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel18" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="staff4NameText" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel19" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="staff5NameText" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel20" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="staff6NameText" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel23" min="-2" pref="105" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
+              </Group>
+              <Component id="jLabel21" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabel21" min="-2" pref="52" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff1NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff2NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff3NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff4NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff5NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staff6NameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="35" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel14">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff1NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel15">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff2NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel16">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff3NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel17">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff4NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel18">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 4"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel19">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff5NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel20">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Supporting Staff 6"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="staff6NameText">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel21">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="66" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="24" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="ADD SUPPORTING STAFF"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel23">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="2"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Name"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="sansserif" size="36" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Next&gt;&gt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

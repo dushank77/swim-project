@@ -5,7 +5,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="SWIMMING COMPETITION"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1262, 735]"/>
+      <Dimension value="[1262, 725]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -32,46 +32,63 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="startButton" min="-2" pref="168" max="-2" attributes="0"/>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel35" alignment="1" min="-2" pref="103" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="staff1Label" min="-2" pref="103" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
                   </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="p4ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="p5ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="p1ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="p3ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="p2ReadyLabel" min="-2" pref="88" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="judgeLabel" min="-2" pref="53" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="player4ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="player1ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="player3ReadyLabel" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="player2ReadyLabel" min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="player5ReadyLabel" min="-2" pref="72" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="jLabel30" min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="staff3Label" min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="jLabel31" min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="staff2Label" min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
@@ -89,7 +106,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+              <Component id="staff3Label" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -103,30 +120,14 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="p1ReadyLabel" min="-2" pref="81" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="p2ReadyLabel" min="-2" pref="71" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="p3ReadyLabel" min="-2" pref="83" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="p4ReadyLabel" min="-2" pref="74" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                              <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                                      <Component id="judgeLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -135,12 +136,26 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="startButton" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="p5ReadyLabel" alignment="1" min="-2" pref="83" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="staff2Label" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="staff1Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="startButton" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="player1ReadyLabel" min="-2" pref="72" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="player2ReadyLabel" min="-2" pref="61" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="player3ReadyLabel" min="-2" pref="77" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="player4ReadyLabel" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="player5ReadyLabel" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -168,60 +183,62 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="chair1" max="32767" attributes="0"/>
+                      <Component id="chair10" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="chair10" min="-2" pref="62" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="chair11" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="chair12" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Component id="chair13" min="-2" pref="60" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="chair1" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Component id="chair2" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="chair3" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="chair4" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="chair5" min="-2" pref="62" max="-2" attributes="0"/>
-                      <Component id="chair14" min="-2" pref="62" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="chair6" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="chair7" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="chair11" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="chair12" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <Component id="chair13" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="chair15" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Component id="chair5" min="-2" pref="62" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="chair16" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="chair6" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          <Component id="chair14" min="-2" pref="62" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="chair15" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="chair7" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="chair8" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="chair9" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <Component id="chair16" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="chair17" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="chair18" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="chair9" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="chair18" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -230,7 +247,6 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="chair1" alignment="3" max="32767" attributes="0"/>
                       <Component id="chair6" alignment="3" max="32767" attributes="0"/>
                       <Component id="chair9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="chair5" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -239,6 +255,7 @@
                       <Component id="chair4" alignment="3" max="32767" attributes="0"/>
                       <Component id="chair2" alignment="3" max="32767" attributes="0"/>
                       <Component id="chair7" alignment="3" max="32767" attributes="0"/>
+                      <Component id="chair1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -258,148 +275,94 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="chair1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="jLabel8"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="chair12">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair17">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair13">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair6">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair10">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel16"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair11">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel17"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair5">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel16"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair8">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel17"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair9">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel17"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair14">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel16"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair15">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel17"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair3">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel17"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair4">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair2">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair16">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair18">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="chair7">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\blue chair.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="chair1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -484,25 +447,13 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="javax.swing.JLabel" name="p1ReadyLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel24"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="player1ReadyLabel">
     </Component>
-    <Component class="javax.swing.JLabel" name="p2ReadyLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel24"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="player2ReadyLabel">
     </Component>
-    <Component class="javax.swing.JLabel" name="p4ReadyLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel24"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="player4ReadyLabel">
     </Component>
-    <Component class="javax.swing.JLabel" name="p3ReadyLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel24"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="player3ReadyLabel">
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
@@ -522,29 +473,29 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="p5Label" min="-2" max="-2" attributes="0"/>
+                          <Component id="player5NameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jTextField5" min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="p4Label" min="-2" max="-2" attributes="0"/>
+                          <Component id="player4NameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jTextField4" min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="p3Label" min="-2" max="-2" attributes="0"/>
+                          <Component id="player3NameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jTextField3" min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="p2Label" min="-2" max="-2" attributes="0"/>
+                              <Component id="player2NameLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jTextField2" min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="p1Label" min="-2" max="-2" attributes="0"/>
+                              <Component id="player1NameLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jTextField1" min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
@@ -560,27 +511,27 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="p1Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player1NameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="p2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player2NameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="p3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player3NameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="p4Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player4NameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="p5Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="player5NameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
@@ -597,7 +548,7 @@
             <Property name="text" type="java.lang.String" value="SCORE BOARD"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="p1Label">
+        <Component class="javax.swing.JLabel" name="player1NameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="player 1"/>
           </Properties>
@@ -612,7 +563,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="p2Label">
+        <Component class="javax.swing.JLabel" name="player2NameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="player 2"/>
           </Properties>
@@ -622,7 +573,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="p3Label">
+        <Component class="javax.swing.JLabel" name="player3NameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="player 3"/>
           </Properties>
@@ -632,12 +583,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="p4Label">
+        <Component class="javax.swing.JLabel" name="player4NameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="player 4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="p5Label">
+        <Component class="javax.swing.JLabel" name="player5NameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="player 5"/>
           </Properties>
@@ -695,7 +646,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="p2SwimLabel" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="player2SwimingLabel" min="-2" pref="61" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPanel13" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -718,7 +669,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="p2SwimLabel" max="32767" attributes="0"/>
+                              <Component id="player2SwimingLabel" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -751,10 +702,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel29">
             </Component>
-            <Component class="javax.swing.JLabel" name="p2SwimLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel36"/>
-              </Properties>
+            <Component class="javax.swing.JLabel" name="player2SwimingLabel">
             </Component>
           </SubComponents>
         </Container>
@@ -770,7 +718,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="p3SwimLabel" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="player3SwimingLabel" min="-2" pref="61" max="-2" attributes="0"/>
                       <EmptySpace pref="381" max="32767" attributes="0"/>
                       <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -785,7 +733,7 @@
                               <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="p3SwimLabel" max="32767" attributes="0"/>
+                          <Component id="player3SwimingLabel" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -813,10 +761,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="p3SwimLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel36"/>
-              </Properties>
+            <Component class="javax.swing.JLabel" name="player3SwimingLabel">
             </Component>
           </SubComponents>
         </Container>
@@ -832,7 +777,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="p4SwimLabel" min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="player4SwimingLabel" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace pref="384" max="32767" attributes="0"/>
                       <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -844,7 +789,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanel16" max="32767" attributes="0"/>
-                          <Component id="p4SwimLabel" max="32767" attributes="0"/>
+                          <Component id="player4SwimingLabel" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
@@ -872,10 +817,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="p4SwimLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel36"/>
-              </Properties>
+            <Component class="javax.swing.JLabel" name="player4SwimingLabel">
             </Component>
           </SubComponents>
         </Container>
@@ -891,7 +833,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="p1SwimLabel" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="player1SwimingLabel" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -906,7 +848,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="p1SwimLabel" max="32767" attributes="0"/>
+                      <Component id="player1SwimingLabel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -933,10 +875,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="p1SwimLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel36"/>
-              </Properties>
+            <Component class="javax.swing.JLabel" name="player1SwimingLabel">
             </Component>
           </SubComponents>
         </Container>
@@ -952,7 +891,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="p5SwimLabel" min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="player5SwimingLabel" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -962,7 +901,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="p5SwimLabel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="player5SwimingLabel" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
@@ -994,36 +933,24 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="p5SwimLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel36"/>
-              </Properties>
+            <Component class="javax.swing.JLabel" name="player5SwimingLabel">
             </Component>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel35">
+    <Component class="javax.swing.JLabel" name="staff1Label">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\staff.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jLabel33"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel30">
+    <Component class="javax.swing.JLabel" name="staff3Label">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\staff left.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jLabel30"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel31">
+    <Component class="javax.swing.JLabel" name="staff2Label">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\staff left.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jLabel30"/>
       </Properties>
     </Component>
@@ -1040,17 +967,11 @@
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dushan\Documents\NetBeansProjects\swim-project\src\images\t34cemqe.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="jLabel3"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="player5ReadyLabel">
     </Component>
-    <Component class="javax.swing.JLabel" name="p5ReadyLabel">
+    <Component class="javax.swing.JLabel" name="judgeLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel24"/>
+        <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
   </SubComponents>

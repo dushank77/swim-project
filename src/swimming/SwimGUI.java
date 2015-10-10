@@ -19,7 +19,9 @@ public class SwimGUI extends javax.swing.JFrame {
     ArrayList<Person> persons;
     Judge judge;
     int playerCount = 0;
-    public int spectatorCount = 0;
+    int spectatorCount = 0;
+    int staffCount = 0;
+    int judgeCount = 0;
 
     /**
      * Creates new form SwimGUI
@@ -29,250 +31,260 @@ public class SwimGUI extends javax.swing.JFrame {
     public SwimGUI(ArrayList<Person> persons) {
         this.persons = persons;
         initComponents();
-        initialize();
+        addChairsToPavillion();
+        addPeopleToLabels();
 
     }
+    
 
-    public void initialize() {
+    public void addPeopleToLabels() {
         for (Person person : persons) {
             try {
 
                 Swimmer swimmer = (Swimmer) person;
                 playerCount++;
                 if (playerCount == 1) {
-                    p1Label.setText(swimmer.getName());
+                    player1NameLabel.setText(swimmer.getName());
                     if (swimmer.getGender().equals("Male")) {
-                        p1ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
-                        p1SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                        player1ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyBlue.png"));
+                        player1SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingBlue.png"));
                     } else {
-                        p1ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
-                        p1SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                        player1ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyRed.png"));
+                        player1SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingRed.png"));
                     }
                 } else if (playerCount == 2) {
-                    p2Label.setText(swimmer.getName());
+                    player2NameLabel.setText(swimmer.getName());
                     if (swimmer.getGender().equals("Male")) {
-                        p2ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
-                        p2SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                        player2ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyBlue.png"));
+                        player2SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingBlue.png"));
                     } else {
-                        p2ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
-                        p2SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                        player2ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyRed.png"));
+                        player2SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingRed.png"));
                     }
                 } else if (playerCount == 3) {
-                    p3Label.setText(swimmer.getName());
+                    player3NameLabel.setText(swimmer.getName());
                     if (swimmer.getGender().equals("Male")) {
-                        p3ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
-                        p3SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                        player3ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyBlue.png"));
+                        player3SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingBlue.png"));
                     } else {
-                        p3ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
-                        p3SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                        player3ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyRed.png"));
+                        player3SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingRed.png"));
                     }
                 } else if (playerCount == 4) {
-                    p4Label.setText(swimmer.getName());
+                    player4NameLabel.setText(swimmer.getName());
                     if (swimmer.getGender().equals("Male")) {
-                        p4ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
-                        p4SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                        player4ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyBlue.png"));
+                        player4SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingBlue.png"));
                     } else {
-                        p4ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
-                        p4SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                        player4ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyRed.png"));
+                        player4SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingRed.png"));
                     }
                 } else if (playerCount == 5) {
-                    p5Label.setText(swimmer.getName());
+                    player5NameLabel.setText(swimmer.getName());
                     if (swimmer.getGender().equals("Male")) {
-                        p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_icon men ico.png"));
-                        p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming blue.png"));
+                        player5ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyBlue.png"));
+                        player5SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingBlue.png"));
                     } else {
-                        p5ReadyLabel.setIcon(new ImageIcon("./src/images/swimming_iconwomen ico.png"));
-                        p5SwimLabel.setIcon(new ImageIcon("./src/images/icon-swimming.png"));
+                        player5ReadyLabel.setIcon(new ImageIcon("./src/images/swimReadyRed.png"));
+                        player5SwimingLabel.setIcon(new ImageIcon("./src/images/swimmingRed.png"));
                     }
                 }
-            } catch (ClassCastException exception) {
+            } catch (ClassCastException exceptionNoSwimmer) {
                 try {
-                    //System.out.println("in if");
                     Spectator spectator = (Spectator) person;
                     spectatorCount++;
                     if (spectatorCount == 1) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair1.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair1.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair1.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair1.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 2) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair2.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair2.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair2.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair2.setIcon(new ImageIcon("./src/images/girlBlack.png"));
                         }
                     } else if (spectatorCount == 3) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair3.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair3.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair3.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair3.setIcon(new ImageIcon("./src/images/girlBlack.png"));
                         }
                     } else if (spectatorCount == 4) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair4.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair4.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair4.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair4.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 5) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair5.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair5.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair5.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair5.setIcon(new ImageIcon("./src/images/girlBlack.png"));
                         }
                     } else if (spectatorCount == 6) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair6.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair6.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair7.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair7.setIcon(new ImageIcon("./src/images/girlBlack.png"));
                         }
 
                     } else if (spectatorCount == 7) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair7.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair7.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair7.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair7.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 8) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair8.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair8.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair8.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair8.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 9) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair9.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair9.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair9.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair9.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 10) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair10.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair10.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair10.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair10.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 11) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair11.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair11.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair12.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair12.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 11) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair11.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair11.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair11.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair11.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 12) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair12.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair12.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair12.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair12.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 13) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair13.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair13.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair13.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair13.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 14) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair14.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair14.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair14.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair14.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 15) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair15.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair15.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair15.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair15.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 16) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair16.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair16.setIcon(new ImageIcon("./src/images/boyGreen.png"));
 
-                            } else {
-                                chair16.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair16.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     } else if (spectatorCount == 17) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair17.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
+                        if (spectator.getGender().equals("Male")) {
+                            chair17.setIcon(new ImageIcon("./src/images/boyBlue.png"));
 
-                            } else {
-                                chair17.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                        } else {
+                            chair17.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
-                    } else if (spectatorCount == 18) {
-                        if (spectator.getName() != "") {
-                            if (spectator.getGender().equals("Male")) {
-                                chair18.setIcon(new ImageIcon("./src/images/boy-512sasas.png"));
 
-                            } else {
-                                chair18.setIcon(new ImageIcon("./src/images/female black.png"));
-                            }
+                    } else if (spectatorCount == 18) {
+
+                        if (spectator.getGender().equals("Male")) {
+                            chair18.setIcon(new ImageIcon("./src/images/boyGreen.png"));
+
+                        } else {
+                            chair18.setIcon(new ImageIcon("./src/images/girlRed.png"));
                         }
                     }
 
-                } catch (ClassCastException classCastException) {
+                } catch (ClassCastException exceptionNoSpectator) {
+                    try {
+                        SupportingStaff supportingStaff = (SupportingStaff) person;
+                        staffCount++;
+                        if (staffCount == 1) {
+                            staff1Label.setIcon(new ImageIcon("./src/images/staffRight.png"));
+                        } else if (staffCount == 2) {
+                            staff2Label.setIcon(new ImageIcon("./src/images/staffLeft.png"));
+                        } else if (staffCount == 3) {
+                            staff3Label.setIcon(new ImageIcon("./src/images/staffLeft.png"));
+                        }
+
+                    } catch (ClassCastException exceptionNoStaff) {
+                        try {
+                            Judge judge = (Judge) person;
+                            judgeCount++;
+                            if (judgeCount == 1) {
+                                judgeLabel.setIcon(new ImageIcon("./src/images/judge.png"));
+                            }
+                        } catch (ClassCastException exceotionNoJudge) {
+                        }
+                    }
                 }
             }
-            p1SwimLabel.setVisible(false);
-            p2SwimLabel.setVisible(false);
-            p3SwimLabel.setVisible(false);
-            p4SwimLabel.setVisible(false);
-            p5SwimLabel.setVisible(false);
+            player1SwimingLabel.setVisible(false);
+            player2SwimingLabel.setVisible(false);
+            player3SwimingLabel.setVisible(false);
+            player4SwimingLabel.setVisible(false);
+            player5SwimingLabel.setVisible(false);
         }
+    }
+    
+    public void addChairsToPavillion(){
+ 
+        chair1.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair2.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair3.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair4.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair5.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair6.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair7.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair8.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair9.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair10.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair11.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair12.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair13.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair14.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair15.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair16.setIcon(new ImageIcon(".src/images/chairGreen.png"));
+        chair17.setIcon(new ImageIcon(".src/images/chairBlue.png"));
+        chair18.setIcon(new ImageIcon(".src/images/chairGreenr.png"));
+        
+        
     }
 
     /**
@@ -285,7 +297,6 @@ public class SwimGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        chair1 = new javax.swing.JLabel();
         chair12 = new javax.swing.JLabel();
         chair17 = new javax.swing.JLabel();
         chair13 = new javax.swing.JLabel();
@@ -303,167 +314,150 @@ public class SwimGUI extends javax.swing.JFrame {
         chair16 = new javax.swing.JLabel();
         chair18 = new javax.swing.JLabel();
         chair7 = new javax.swing.JLabel();
+        chair1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        p1ReadyLabel = new javax.swing.JLabel();
-        p2ReadyLabel = new javax.swing.JLabel();
-        p4ReadyLabel = new javax.swing.JLabel();
-        p3ReadyLabel = new javax.swing.JLabel();
+        player1ReadyLabel = new javax.swing.JLabel();
+        player2ReadyLabel = new javax.swing.JLabel();
+        player4ReadyLabel = new javax.swing.JLabel();
+        player3ReadyLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        p1Label = new javax.swing.JLabel();
+        player1NameLabel = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        p2Label = new javax.swing.JLabel();
+        player2NameLabel = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        p3Label = new javax.swing.JLabel();
+        player3NameLabel = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        p4Label = new javax.swing.JLabel();
-        p5Label = new javax.swing.JLabel();
+        player4NameLabel = new javax.swing.JLabel();
+        player5NameLabel = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        p2SwimLabel = new javax.swing.JLabel();
+        player2SwimingLabel = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
-        p3SwimLabel = new javax.swing.JLabel();
+        player3SwimingLabel = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
-        p4SwimLabel = new javax.swing.JLabel();
+        player4SwimingLabel = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        p1SwimLabel = new javax.swing.JLabel();
+        player1SwimingLabel = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
-        p5SwimLabel = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        player5SwimingLabel = new javax.swing.JLabel();
+        staff1Label = new javax.swing.JLabel();
+        staff3Label = new javax.swing.JLabel();
+        staff2Label = new javax.swing.JLabel();
         startButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        p5ReadyLabel = new javax.swing.JLabel();
+        player5ReadyLabel = new javax.swing.JLabel();
+        judgeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SWIMMING COMPETITION");
-        setPreferredSize(new java.awt.Dimension(1262, 735));
+        setPreferredSize(new java.awt.Dimension(1262, 725));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
 
-        chair1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
-        chair1.setText("jLabel8");
-
-        chair12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair12.setText("jLabel8");
 
-        chair17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair17.setText("jLabel8");
 
-        chair13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair13.setText("jLabel8");
 
-        chair6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair6.setText("jLabel8");
 
-        chair10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair10.setText("jLabel16");
 
-        chair11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair11.setText("jLabel17");
 
-        chair5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair5.setText("jLabel16");
 
-        chair8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair8.setText("jLabel17");
 
-        chair9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair9.setText("jLabel17");
 
-        chair14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair14.setText("jLabel16");
 
-        chair15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair15.setText("jLabel17");
 
-        chair3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair3.setText("jLabel17");
 
-        chair4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair4.setText("jLabel8");
 
-        chair2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair2.setText("jLabel8");
 
-        chair16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair16.setText("jLabel8");
 
-        chair18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\chair.png")); // NOI18N
         chair18.setText("jLabel8");
 
-        chair7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\blue chair.png")); // NOI18N
         chair7.setText("jLabel8");
+
+        chair1.setText("jLabel3");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(chair1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chair10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(chair10, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chair11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(chair12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(chair13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(chair1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(chair2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chair3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(chair4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chair5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chair14, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(chair6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chair7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(chair15, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(chair16, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(5, 5, 5)
+                        .addComponent(chair3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chair4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(chair11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chair12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(chair13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(chair8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chair9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addComponent(chair5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(chair6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(chair14, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chair15, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(chair7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chair8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(chair16, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(chair17, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chair18, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(11, 11, 11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chair9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chair18, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chair1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(chair6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(chair9)
                     .addComponent(chair5)
@@ -471,7 +465,8 @@ public class SwimGUI extends javax.swing.JFrame {
                     .addComponent(chair3)
                     .addComponent(chair4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(chair2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chair7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(chair7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chair1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chair15)
@@ -538,14 +533,6 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        p1ReadyLabel.setText("jLabel24");
-
-        p2ReadyLabel.setText("jLabel24");
-
-        p4ReadyLabel.setText("jLabel24");
-
-        p3ReadyLabel.setText("jLabel24");
-
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setForeground(new java.awt.Color(51, 51, 255));
         jPanel1.setName(""); // NOI18N
@@ -553,7 +540,7 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
         jLabel1.setText("SCORE BOARD");
 
-        p1Label.setText("player 1");
+        player1NameLabel.setText("player 1");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -567,7 +554,7 @@ public class SwimGUI extends javax.swing.JFrame {
             }
         });
 
-        p2Label.setText("player 2");
+        player2NameLabel.setText("player 2");
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -575,7 +562,7 @@ public class SwimGUI extends javax.swing.JFrame {
             }
         });
 
-        p3Label.setText("player 3");
+        player3NameLabel.setText("player 3");
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -583,9 +570,9 @@ public class SwimGUI extends javax.swing.JFrame {
             }
         });
 
-        p4Label.setText("player 4");
+        player4NameLabel.setText("player 4");
 
-        p5Label.setText("player 5");
+        player5NameLabel.setText("player 5");
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -601,25 +588,25 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(p5Label)
+                        .addComponent(player5NameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(p4Label)
+                        .addComponent(player4NameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(p3Label)
+                        .addComponent(player3NameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(p2Label)
+                            .addComponent(player2NameLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(p1Label)
+                            .addComponent(player1NameLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(26, 26, 26))
@@ -630,23 +617,23 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p1Label)
+                    .addComponent(player1NameLabel)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2Label)
+                    .addComponent(player2NameLabel)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p3Label)
+                    .addComponent(player3NameLabel)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p4Label)
+                    .addComponent(player4NameLabel)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p5Label)
+                    .addComponent(player5NameLabel)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 14, Short.MAX_VALUE))
         );
@@ -668,15 +655,13 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 49, Short.MAX_VALUE)
         );
 
-        p2SwimLabel.setText("jLabel36");
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(p2SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player2SwimingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -694,7 +679,7 @@ public class SwimGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(p2SwimLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(player2SwimingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jLabel29)
                 .addContainerGap())
@@ -715,15 +700,13 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 51, Short.MAX_VALUE)
         );
 
-        p3SwimLabel.setText("jLabel36");
-
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(p3SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player3SwimingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -735,7 +718,7 @@ public class SwimGUI extends javax.swing.JFrame {
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 9, Short.MAX_VALUE))
-                    .addComponent(p3SwimLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(player3SwimingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -754,15 +737,13 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 52, Short.MAX_VALUE)
         );
 
-        p4SwimLabel.setText("jLabel36");
-
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(p4SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player4SwimingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 384, Short.MAX_VALUE)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -772,7 +753,7 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(p4SwimLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(player4SwimingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -791,15 +772,13 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 49, Short.MAX_VALUE)
         );
 
-        p1SwimLabel.setText("jLabel36");
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(p1SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player1SwimingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -811,7 +790,7 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(p1SwimLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(player1SwimingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -830,15 +809,13 @@ public class SwimGUI extends javax.swing.JFrame {
             .addGap(0, 52, Short.MAX_VALUE)
         );
 
-        p5SwimLabel.setText("jLabel36");
-
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(p5SwimLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player5SwimingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -846,7 +823,7 @@ public class SwimGUI extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(p5SwimLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(player5SwimingLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -877,14 +854,11 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\staff.png")); // NOI18N
-        jLabel35.setText("jLabel33");
+        staff1Label.setText("jLabel33");
 
-        jLabel30.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\staff left.png")); // NOI18N
-        jLabel30.setText("jLabel30");
+        staff3Label.setText("jLabel30");
 
-        jLabel31.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\staff left.png")); // NOI18N
-        jLabel31.setText("jLabel30");
+        staff2Label.setText("jLabel30");
 
         startButton.setText("START");
         startButton.addActionListener(new java.awt.event.ActionListener() {
@@ -895,10 +869,7 @@ public class SwimGUI extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dushan\\Documents\\NetBeansProjects\\swim-project\\src\\images\\t34cemqe.png")); // NOI18N
-        jLabel3.setText("jLabel3");
-
-        p5ReadyLabel.setText("jLabel24");
+        judgeLabel.setText("jLabel3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -909,37 +880,48 @@ public class SwimGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addGap(1, 1, 1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addGap(1, 1, 1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(staff1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 146, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(judgeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(player4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(player1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(player3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(player2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(player5ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(p4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(p5ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(p1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(p3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(p2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(54, 54, 54)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(staff3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(staff2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -952,7 +934,7 @@ public class SwimGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addComponent(jLabel30)
+                .addComponent(staff3Label)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -964,36 +946,35 @@ public class SwimGUI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(43, 43, 43)
-                                .addComponent(p1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(p2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(p3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(p4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(31, 31, 31)
-                                                .addComponent(jLabel3)
-                                                .addGap(73, 73, 73)
-                                                .addComponent(jLabel35)))
+                                        .addGap(205, 205, 205)
+                                        .addComponent(judgeLabel)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel31)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(p5ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(staff2Label)
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(staff1Label)
+                                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(player1ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(player2ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(player3ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(player4ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(player5ReadyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1024,18 +1005,18 @@ public class SwimGUI extends javax.swing.JFrame {
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         // TODO add your handling code here:
-        p1SwimLabel.setVisible(true);
-        p2SwimLabel.setVisible(true);
-        p3SwimLabel.setVisible(true);
-        p4SwimLabel.setVisible(true);
-        p5SwimLabel.setVisible(true);
+        player1SwimingLabel.setVisible(true);
+        player2SwimingLabel.setVisible(true);
+        player3SwimingLabel.setVisible(true);
+        player4SwimingLabel.setVisible(true);
+        player5SwimingLabel.setVisible(true);
 
-        p1ReadyLabel.setVisible(false);
-        p2ReadyLabel.setVisible(false);
-        p3ReadyLabel.setVisible(false);
-        p4ReadyLabel.setVisible(false);
-        p5ReadyLabel.setVisible(false);
-        System.out.println(spectatorCount);
+        player1ReadyLabel.setVisible(false);
+        player2ReadyLabel.setVisible(false);
+        player3ReadyLabel.setVisible(false);
+        player4ReadyLabel.setVisible(false);
+        player5ReadyLabel.setVisible(false);
+
 
     }//GEN-LAST:event_startButtonActionPerformed
 
@@ -1100,10 +1081,6 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1126,21 +1103,25 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JLabel p1Label;
-    private javax.swing.JLabel p1ReadyLabel;
-    private javax.swing.JLabel p1SwimLabel;
-    private javax.swing.JLabel p2Label;
-    private javax.swing.JLabel p2ReadyLabel;
-    private javax.swing.JLabel p2SwimLabel;
-    private javax.swing.JLabel p3Label;
-    private javax.swing.JLabel p3ReadyLabel;
-    private javax.swing.JLabel p3SwimLabel;
-    private javax.swing.JLabel p4Label;
-    private javax.swing.JLabel p4ReadyLabel;
-    private javax.swing.JLabel p4SwimLabel;
-    private javax.swing.JLabel p5Label;
-    private javax.swing.JLabel p5ReadyLabel;
-    private javax.swing.JLabel p5SwimLabel;
+    private javax.swing.JLabel judgeLabel;
+    private javax.swing.JLabel player1NameLabel;
+    private javax.swing.JLabel player1ReadyLabel;
+    private javax.swing.JLabel player1SwimingLabel;
+    private javax.swing.JLabel player2NameLabel;
+    private javax.swing.JLabel player2ReadyLabel;
+    private javax.swing.JLabel player2SwimingLabel;
+    private javax.swing.JLabel player3NameLabel;
+    private javax.swing.JLabel player3ReadyLabel;
+    private javax.swing.JLabel player3SwimingLabel;
+    private javax.swing.JLabel player4NameLabel;
+    private javax.swing.JLabel player4ReadyLabel;
+    private javax.swing.JLabel player4SwimingLabel;
+    private javax.swing.JLabel player5NameLabel;
+    private javax.swing.JLabel player5ReadyLabel;
+    private javax.swing.JLabel player5SwimingLabel;
+    private javax.swing.JLabel staff1Label;
+    private javax.swing.JLabel staff2Label;
+    private javax.swing.JLabel staff3Label;
     private javax.swing.JButton startButton;
     // End of variables declaration//GEN-END:variables
 }

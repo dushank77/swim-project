@@ -1,6 +1,7 @@
 package swimming;
 
 public class Spectator extends Person {
+    
     public static int spectatorCount=0;
 
     Spectator(String name, String gender) {
@@ -40,8 +41,10 @@ public class Spectator extends Person {
         return gender;
     }
     
-    public static void spectatorNumber(){
-        System.out.println(spectatorCount);
-    }
+    
 
+    public static int getNumber() {
+        System.out.println("Number of spectators : "+spectatorCount);
+        return spectatorCount;
+    }
 }

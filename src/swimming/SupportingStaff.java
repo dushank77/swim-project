@@ -1,6 +1,13 @@
 package swimming;
 
 public class SupportingStaff extends Person {
+    
+    public static int supportingStaffCount=0;
+    
+    SupportingStaff(String name){
+        this.name=name;
+        supportingStaffCount++;
+    }
 
     public void setname() {
         name = "";
@@ -34,6 +41,11 @@ public class SupportingStaff extends Person {
     @Override
     public String getGender() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static int getNumber() {
+        System.out.println("Number of supporting staff : "+supportingStaffCount);
+        return supportingStaffCount;
     }
 
 }
