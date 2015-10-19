@@ -1163,6 +1163,10 @@ public class AddPeople extends javax.swing.JFrame {
         createJudge();
         createSupportingStaff();
         
+        PeopleCountGUI countGui=new PeopleCountGUI();
+        countGui.setVisible(true);
+        
+           
         new SwimGUI(persons).setVisible(true);
 
         Spectator.getNumber();
